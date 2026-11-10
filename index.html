@@ -6,182 +6,185 @@
 <title>Zierch — portfolio</title>
 <meta name="description" content="Portfolio Nabil (Zierch) — aplikasi Android, REST API, dan olah data. Flutter, Java, PHP, SQL.">
 <meta name="color-scheme" content="dark light">
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dancing-script-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0d10'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='%237dd3fc' text-anchor='middle'>Z</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000'/><text x='50' y='72' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='%239072D4' text-anchor='middle'>Z</text></svg>">
 </head>
 <body>
 
-<a class="skip" href="#proyek">Lompat ke proyek</a>
+<a class="skip" href="#projects">Lompat ke projects</a>
 
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Portfolio</p>
-    <h1>Zierch</h1>
-    <p class="lede">
-      Aku bikin aplikasi yang benar-benar dipakai — dari aplikasi Android,
-      REST API, sampai olah data. Fokus di <strong>Flutter</strong>,
-      <strong>Java</strong>, <strong>PHP</strong>, dan <strong>SQL</strong>.
-    </p>
-    <nav class="links" aria-label="Tautan utama">
-      <a href="https://github.com/Zierch" class="btn btn-primary">
-        <svg viewBox="0 0 16 16" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        GitHub
-      </a>
-      <a href="#proyek" class="btn">Lihat proyek</a>
-    </nav>
-  </div>
+<header class="nav wrap">
+  <a class="logo" href="#top">zierch</a>
+  <nav class="menu" aria-label="Navigasi utama">
+    <a href="#top" aria-current="page">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="menu-mobile" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<main>
+<main id="top">
 
-  <section id="proyek" class="wrap section" aria-labelledby="proyek-judul">
-    <h2 id="proyek-judul">Proyek</h2>
+  <!-- ================= HERO ================= -->
+  <section id="about" class="hero wrap" aria-labelledby="hero-judul">
+    <div class="hero-text">
+      <h1 id="hero-judul">About Me</h1>
+      <p>
+        Aku membangun aplikasi yang benar-benar dipakai — aplikasi Android,
+        REST API, dan olah data. Fokus di <strong>Flutter</strong>,
+        <strong>Java</strong>, <strong>PHP</strong>, dan <strong>SQL</strong>,
+        dengan pengalaman dari tugas sekolah sampai aplikasi siap rilis.
+      </p>
+      <p>
+        Ketika tidak sedang menulis kode, aku menelusuri tren desain baru,
+        membaca dokumentasi, dan merapikan proyek lama — test, pipeline CI,
+        sampai rilis APK bertanda tangan.
+      </p>
+      <p>
+        Selalu tertarik pada proyek yang menantang untuk tumbuh dan
+        mempelajari hal baru.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">Lihat proyek</a>
+        <a class="btn btn-ghost" href="https://github.com/Zierch">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/kucing.webp" width="520" height="390" alt="Kucing piksel ungu duduk di antara bintang kecil, latar hitam." fetchpriority="high">
+    </div>
+  </section>
 
-    <!-- ============ expense_tracker ============ -->
-    <article class="project">
-      <div class="project-text">
-        <div class="project-head">
-          <h3>Expense Tracker</h3>
-          <span class="tag">Flutter</span>
-        </div>
-        <p>
-          Aplikasi Android untuk mencatat pemasukan dan pengeluaran. Semua data
-          tinggal di SQLite di HP — tidak ada yang diunggah ke mana pun kecuali
-          kamu menekan tombol ekspor. Backup bulanan berupa JSON disimpan ke
-          Google Drive milikmu sendiri, dengan izin <code>drive.file</code> saja.
-        </p>
-        <ul class="points">
-          <li>Dashboard, statistik, dan rincian per kategori</li>
-          <li>Tema terang &amp; gelap, satu basis kode</li>
-          <li>Ekspor/impor per bulan, tanpa server</li>
+  <!-- ================= SKILLS ================= -->
+  <section class="section wrap" aria-labelledby="skills-judul">
+    <h2 id="skills-judul">Skills &amp; Technologies</h2>
+    <div class="skills">
+      <div class="card skill">
+        <h3>Mobile</h3>
+        <ul class="pills">
+          <li>Flutter</li><li>Dart</li><li>Android</li>
         </ul>
-        <p class="project-links">
-          <a href="https://github.com/Zierch/expense_tracker">Kode &amp; README <span aria-hidden="true">→</span></a>
-        </p>
+      </div>
+      <div class="card skill">
+        <h3>Backend</h3>
+        <ul class="pills">
+          <li>PHP</li><li>Laravel</li><li>MySQL</li>
+        </ul>
+      </div>
+      <div class="card skill">
+        <h3>Data &amp; Tools</h3>
+        <ul class="pills">
+          <li>SQLite</li><li>Git</li><li>CI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PENDIDIKAN ================= -->
+  <section class="section wrap" aria-labelledby="pendidikan-judul">
+    <h2 id="pendidikan-judul">Pendidikan</h2>
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="year">2025</span>
+        <div class="card timeline-card">
+          <h3>S1 Informatika · UPN Veteran Jawa Timur</h3>
+          <p class="meta">2025 — sekarang</p>
+          <p class="desc">Melanjutkan pendidikan tinggi di bidang informatika setelah menyelesaikan jurusan RPL di SMK.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="year">2022</span>
+        <div class="card timeline-card">
+          <h3>Rekayasa Perangkat Lunak · SMK Negeri 2 Kota Mojokerto</h3>
+          <p class="meta">2022 — 2025</p>
+          <p class="desc">Tugas akhir: StudyConnect — aplikasi Android dan REST API Laravel untuk kelas guru dan siswa.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section wrap" aria-labelledby="projects-judul">
+    <h2 id="projects-judul">Projects</h2>
+    <p class="section-sub">Tiga proyek yang sudah selesai — semuanya punya README, test, dan CI.</p>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>Expense Tracker</h3>
+        <p class="tag">Flutter</p>
+        <p class="desc">Pencatatan keuangan offline dengan backup JSON bulanan ke Google Drive sendiri. Tema terang &amp; gelap, ekspor-impor per bulan.</p>
+        <a class="repo" href="https://github.com/Zierch/expense_tracker">github.com/Zierch/expense_tracker</a>
       </div>
       <div class="shots" role="group" aria-label="Tangkapan layar Expense Tracker">
-        <img src="assets/expense-dashboard.webp" width="540" height="1134" loading="lazy"
-             alt="Dashboard Expense Tracker tema gelap: total saldo bulan ini dan daftar transaksi terakhir.">
-        <img src="assets/expense-statistics.webp" width="540" height="1134" loading="lazy"
-             alt="Halaman statistik: grafik pengeluaran per kategori.">
-        <img src="assets/expense-add.webp" width="540" height="1134" loading="lazy"
-             alt="Formulir tambah transaksi yang sudah terisi nominal dan kategori.">
+        <img src="assets/expense-dashboard.webp" width="540" height="1134" loading="lazy" alt="Dashboard Expense Tracker tema gelap: total saldo bulan ini dan daftar transaksi terakhir.">
+        <img src="assets/expense-statistics.webp" width="540" height="1134" loading="lazy" alt="Halaman statistik: grafik pengeluaran per kategori.">
+        <img src="assets/expense-add.webp" width="540" height="1134" loading="lazy" alt="Formulir tambah transaksi yang sudah terisi nominal dan kategori.">
       </div>
     </article>
 
-    <!-- ============ device-point ============ -->
-    <article class="project">
-      <div class="project-text">
-        <div class="project-head">
-          <h3>Device Point</h3>
-          <span class="tag">Java</span>
-        </div>
-        <p>
-          Katalog produk Android dengan dua peran: pengguna yang menjelajah
-          katalog, dan admin yang mengelola produk. Berjalan sepenuhnya offline
-          di atas SQLite — tanpa server, tanpa request jaringan selain tombol
-          kontak WhatsApp.
-        </p>
-        <ul class="points">
-          <li>Cari dan urutkan produk, unggah foto dengan kompresi otomatis</li>
-          <li>Password disimpan sebagai hash, halaman admin diproteksi ulang di database</li>
-          <li>APK rilis bertanda tangan, tersedia di halaman Releases</li>
-        </ul>
-        <p class="project-links">
-          <a href="https://github.com/Zierch/device-point/releases/latest" class="accent">Unduh APK <span aria-hidden="true">↓</span></a>
-          <a href="https://github.com/Zierch/device-point">Kode &amp; README <span aria-hidden="true">→</span></a>
-        </p>
+    <article class="card project">
+      <div class="project-info">
+        <h3>Device Point</h3>
+        <p class="tag">Java</p>
+        <p class="desc">Katalog produk offline dengan peran admin &amp; pengguna. CRUD produk, unggah foto dengan kompresi, APK rilis bertanda tangan.</p>
+        <a class="repo" href="https://github.com/Zierch/device-point">github.com/Zierch/device-point</a>
       </div>
       <div class="shots" role="group" aria-label="Tangkapan layar Device Point">
-        <img src="assets/device-list.webp" width="540" height="1200" loading="lazy"
-             alt="Daftar produk Device Point: kartu produk dengan foto, harga, dan stok.">
-        <img src="assets/device-detail.webp" width="540" height="1200" loading="lazy"
-             alt="Halaman detail produk dengan spesifikasi, garansi, dan tombol hubungi penjual.">
-        <img src="assets/device-admin.webp" width="540" height="1200" loading="lazy"
-             alt="Formulir admin untuk menambah produk baru.">
+        <img src="assets/device-list.webp" width="540" height="1200" loading="lazy" alt="Daftar produk Device Point: kartu produk dengan foto, harga, dan stok.">
+        <img src="assets/device-detail.webp" width="540" height="1200" loading="lazy" alt="Halaman detail produk dengan spesifikasi, garansi, dan tombol hubungi penjual.">
+        <img src="assets/device-admin.webp" width="540" height="1200" loading="lazy" alt="Formulir admin untuk menambah produk baru.">
       </div>
     </article>
 
-    <!-- ============ StudyConnect ============ -->
-    <article class="project">
-      <div class="project-text">
-        <div class="project-head">
-          <h3>StudyConnect</h3>
-          <span class="tag">Java</span>
-          <span class="tag">PHP</span>
-        </div>
-        <p>
-          Aplikasi kelas untuk guru dan siswa — tugas akhir SMK. Terdiri dari
-          aplikasi Android dan REST API Laravel terpisah. Login memakai token
-          Bearer, lalu beranda, forum, tugas, dan daftar anggota kelas dibaca
-          langsung dari API.
-        </p>
-        <ul class="points">
-          <li>Aplikasi Android: Retrofit, Hilt, lifecycle-safe</li>
-          <li>API: 26 endpoint, 78 test, otorisasi per kelas di setiap rute</li>
-          <li>CI hijau di kedua repo</li>
-        </ul>
-        <p class="project-links">
-          <a href="https://github.com/Zierch/StudyConnect">Aplikasi <span aria-hidden="true">→</span></a>
-          <a href="https://github.com/Zierch/StudyConnect-API">API <span aria-hidden="true">→</span></a>
-        </p>
+    <article class="card project">
+      <div class="project-info">
+        <h3>StudyConnect</h3>
+        <p class="tag">Java · PHP</p>
+        <p class="desc">Aplikasi kelas untuk guru &amp; siswa, terhubung ke REST API Laravel. 26 endpoint, 78 test, otorisasi per kelas.</p>
+        <a class="repo" href="https://github.com/Zierch/StudyConnect">github.com/Zierch/StudyConnect</a>
       </div>
       <div class="shots" role="group" aria-label="Tangkapan layar StudyConnect">
-        <img src="assets/study-login.webp" width="540" height="1200" loading="lazy"
-             alt="Layar login StudyConnect dengan kolom email dan password.">
-        <img src="assets/study-beranda.webp" width="540" height="1200" loading="lazy"
-             alt="Beranda StudyConnect menampilkan daftar kelas milik pengguna.">
-        <img src="assets/study-forum.webp" width="540" height="1200" loading="lazy"
-             alt="Tab Forum di dalam kelas, menampilkan pengumuman dari guru.">
+        <img src="assets/study-login.webp" width="540" height="1200" loading="lazy" alt="Layar login StudyConnect dengan kolom email dan password.">
+        <img src="assets/study-beranda.webp" width="540" height="1200" loading="lazy" alt="Beranda StudyConnect menampilkan daftar kelas milik pengguna.">
+        <img src="assets/study-forum.webp" width="540" height="1200" loading="lazy" alt="Tab Forum di dalam kelas, menampilkan pengumuman dari guru.">
       </div>
     </article>
-
   </section>
 
-  <section id="tentang" class="wrap section" aria-labelledby="tentang-judul">
-    <h2 id="tentang-judul">Tentang</h2>
-    <div class="about">
-      <p>
-        Aku belajar dengan cara membuat sesuatu yang selesai: aplikasi yang bisa
-        dipasang, API yang bisa diuji, dan kode yang bisa dibaca orang lain.
-        Ketiga proyek di atas berangkat dari kebutuhan nyata — satu untuk
-        mencatat keuangan harian, satu untuk katalog produk, satu untuk tugas
-        akhir sekolah.
-      </p>
-      <p>
-        Selain fitur, aku juga merawat bagian yang jarang terlihat: test,
-        pipeline CI, rilis APK bertanda tangan, dan pemeriksaan keamanan
-        otorisasi. Menurutku aplikasi yang bagus itu yang masih enak dipakai dan
-        diubah setahun kemudian.
-      </p>
+  <!-- ================= BLOG ================= -->
+  <section id="blog" class="section wrap" aria-labelledby="blog-judul">
+    <h2 id="blog-judul">Blog</h2>
+    <p class="section-sub">Tulisan tentang hal yang kutemui saat membangun proyek — belum ada yang terbit.</p>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section wrap contact" aria-labelledby="contact-judul">
+    <div class="contact-main">
+      <h2 id="contact-judul">Mari bekerja sama</h2>
+      <p class="desc">Punya proyek, pertanyaan, atau sekadar ingin menyapa? Kirim pesan lewat GitHub — issue atau diskusi di repo mana pun akan kubaca.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/Zierch">Buka GitHub</a>
+      </div>
     </div>
-
-    <h3 class="stack-judul">Yang kupakai</h3>
-    <ul class="stack">
-      <li>Flutter &amp; Dart</li>
-      <li>Java (Android)</li>
-      <li>PHP &amp; Laravel</li>
-      <li>MySQL &amp; SQLite</li>
-      <li>Git &amp; GitHub Actions</li>
-      <li>Android Studio</li>
-    </ul>
-  </section>
-
-  <section id="kontak" class="wrap section" aria-labelledby="kontak-judul">
-    <h2 id="kontak-judul">Kontak</h2>
-    <p class="kontak-teks">
-      Paling gampang lewat GitHub — issue atau diskusi di repo mana pun akan
-      kubaca.
-    </p>
-    <p class="project-links">
-      <a href="https://github.com/Zierch" class="btn btn-primary">github.com/Zierch</a>
-    </p>
+    <div class="contact-links">
+      <h3>TAUTAN</h3>
+      <ul>
+        <li><a href="https://github.com/Zierch">github.com/Zierch</a></li>
+        <li><a href="https://zierch.github.io/portfolio/">zierch.github.io/portfolio</a></li>
+      </ul>
+    </div>
   </section>
 
 </main>
 
 <footer class="wrap">
-  <p>Dibuat dengan HTML dan CSS biasa — tanpa framework, tanpa build step.</p>
+  <p>© 2026 Zierch — dibangun dengan HTML dan CSS biasa.</p>
+  <a href="#top">Kembali ke atas ↑</a>
 </footer>
 
 </body>
