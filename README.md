@@ -1,6 +1,6 @@
-# Portofolio
+# Portfolio
 
-Situs portofolio satu halaman, HTML dan CSS biasa. Tanpa framework, tanpa build
+Situs portfolio satu halaman, HTML dan CSS biasa. Tanpa framework, tanpa build
 step, tanpa JavaScript.
 
 - `index.html` — seluruh isi
