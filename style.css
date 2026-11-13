@@ -443,27 +443,6 @@ h2 {
 
 .shots img:hover { transform: translateY(-3px); }
 
-/* Grafik penelitian: rasio lebar, bukan potret seperti screenshot HP.
-   Dua kolom supaya tiap gambar tetap terbaca. */
-.shots--charts {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.shots--charts img {
-  aspect-ratio: auto;
-  max-height: none;
-  object-fit: contain;
-  background: #fff;
-  padding: 6px;
-  border-radius: 10px;
-}
-
-/* kartu penelitian: kolom teks lebih sempit supaya grafik dapat ruang */
-.project:has(.shots--charts) {
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-}
-
 /* ---------- contact ---------- */
 
 .contact {
