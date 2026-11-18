@@ -143,6 +143,7 @@
           <a class="btn btn-primary btn-sm" href="https://github.com/Zierch/device-point/releases/latest">Unduh APK <span aria-hidden="true">↓</span></a>
           <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/device-point">Kode <span aria-hidden="true">→</span></a>
         </div>
+        <p class="project-note">Data lokal · akun demo: admin / admin123</p>
       </div>
       <div class="shots" role="group" aria-label="Tangkapan layar Device Point">
         <img src="assets/device-list.webp" width="540" height="1200" loading="lazy" alt="Daftar produk Device Point: kartu produk dengan foto, harga, dan stok.">
@@ -173,7 +174,43 @@
   <!-- ================= BLOG ================= -->
   <section id="blog" class="section wrap" aria-labelledby="blog-judul">
     <h2 id="blog-judul">Blog</h2>
-    <p class="section-sub">Tulisan tentang hal yang kutemui saat membangun proyek — belum ada yang terbit.</p>
+
+    <article class="post">
+      <p class="post-meta">18 NOV 2026 · 4 MENIT BACA</p>
+      <h3>Backup tanpa menyimpan data di server</h3>
+      <p>
+        Expense Tracker menyimpan semua transaksi di SQLite di HP. Satu-satunya
+        fitur yang menyentuh jaringan adalah backup dan pengecekan update. Saya
+        sengaja tidak membuat akun atau server sendiri — yang dipakai adalah
+        Google Drive milik pengguna.
+      </p>
+      <h4>Izin yang sesempit mungkin</h4>
+      <p>
+        Aplikasi hanya meminta scope <code>drive.file</code>. Artinya aplikasi
+        bisa melihat dan mengubah file yang <em>dibuatnya sendiri</em>, bukan
+        seluruh isi Drive. Karena scope ini tidak termasuk kategori sensitif,
+        aplikasi tidak perlu menjalani verifikasi OAuth yang panjang.
+      </p>
+      <h4>Dua bentuk berkas</h4>
+      <p>
+        Ada ekspor per bulan (<code>schemaVersion: 1</code>) dan snapshot seluruh
+        riwayat (<code>schemaVersion: 2</code>). Keduanya punya field
+        <code>app</code> dan <code>backupType</code> yang diperiksa saat impor —
+        jadi berkas dari aplikasi lain tidak akan diterima. Impor juga mencocokkan
+        transaksi yang sudah ada supaya file yang sama tidak menambah duplikat.
+      </p>
+      <h4>Satu operasi dalam satu waktu</h4>
+      <p>
+        <code>SnapshotCoordinator</code> memakai penanda <code>_busy</code> untuk
+        menolak backup atau sinkronisasi yang bersamaan. Sederhana, tapi
+        mencegah dua proses menulis file yang sama di Drive.
+      </p>
+      <p>
+        Hasilnya: tidak ada server yang saya bayar, tidak ada data pengguna yang
+        saya simpan, dan aplikasi tetap bisa dipakai tanpa koneksi.
+      </p>
+      <a class="repo" href="https://github.com/Zierch/expense_tracker/blob/main/PRIVACY.md">Baca PRIVACY.md <span aria-hidden="true">→</span></a>
+    </article>
   </section>
 
   <!-- ================= CONTACT ================= -->
