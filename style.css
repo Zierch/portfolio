@@ -184,6 +184,27 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+/* badge kecil di hero — tanpa angka harga */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 6px 14px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+}
+
 .hero-text p {
   margin: 0 0 22px;
   color: var(--dim);
@@ -309,6 +330,10 @@ h2 {
   font-weight: 500;
   line-height: 1.5;
 }
+
+/* kartu "Bisa kubantu" — tinggi mengikuti isi */
+.service .desc { margin: 0; }
+.service { min-height: 0; }
 
 /* ---------- pendidikan ---------- */
 
