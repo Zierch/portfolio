@@ -3,9 +3,16 @@
 Situs portfolio satu halaman, HTML dan CSS biasa. Tanpa framework, tanpa build
 step, tanpa JavaScript.
 
-- `index.html` — seluruh isi
+- `index.html` — seluruh isi (Bahasa Indonesia)
+- `en/index.html` — versi Bahasa Inggris
 - `style.css` — seluruh tampilan
 - `assets/` — tangkapan layar aplikasi (WebP), ilustrasi, dan font
+
+Kedua bahasa memakai satu `style.css`. Versi Inggris ada di `/en/`, dengan
+path aset relatif `../assets/`. Penanda bahasa di nav saling menautkan: `EN`
+di halaman Indonesia dan `ID` di halaman Inggris. Atribut `lang`, `hreflang`,
+teks `alt` gambar, dan `aria-label` ikut diterjemahkan — bukan sekadar
+mengganti teks yang terlihat.
 
 ## Desain
 

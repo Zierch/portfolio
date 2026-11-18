@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zierch — portfolio</title>
+<meta name="description" content="Portfolio of Nabil (Zierch) — Android apps, REST APIs, and data work. Flutter, Java, PHP, SQL.">
+<meta name="color-scheme" content="dark light">
+<link rel="alternate" hreflang="id" href="https://zierch.github.io/portfolio/">
+<link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/dancing-script-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+</head>
+<body>
+
+<a class="skip" href="#projects">Skip to projects</a>
+
+<header class="nav wrap">
+  <a class="logo" href="#top">zierch</a>
+  <nav class="menu" id="menu-mobile" aria-label="Main navigation">
+    <a href="#top" aria-current="page">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="lang" href="../" hreflang="id" lang="id" aria-label="Ganti ke Bahasa Indonesia">ID</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="menu-mobile" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section id="about" class="hero wrap" aria-labelledby="hero-judul">
+    <div class="hero-text">
+      <p class="badge"><span class="dot"></span> Open for small projects</p>
+      <h1 id="hero-judul">About Me</h1>
+      <p>
+        I build apps that actually get used — Android apps, REST APIs, and data
+        work. I focus on <strong>Flutter</strong>, <strong>Java</strong>,
+        <strong>PHP</strong>, and <strong>SQL</strong>, with experience ranging
+        from school assignments to production-ready releases.
+      </p>
+      <p>
+        When I'm not writing code, I look into new design trends, read
+        documentation, and tidy up older projects — tests, CI pipelines,
+        and signed APK releases.
+      </p>
+      <p>
+        I'm always interested in projects that push me to grow and learn
+        something new.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="https://github.com/Zierch">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="../assets/kucing.webp" width="520" height="390" alt="Purple pixel-art cat sitting among small stars on a black background." fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section wrap" aria-labelledby="skills-judul">
+    <h2 id="skills-judul">Skills &amp; Technologies</h2>
+    <div class="skills">
+      <div class="card skill">
+        <h3>Mobile</h3>
+        <ul class="pills">
+          <li>Flutter</li><li>Dart</li><li>Android</li>
+        </ul>
+      </div>
+      <div class="card skill">
+        <h3>Backend</h3>
+        <ul class="pills">
+          <li>PHP</li><li>Laravel</li><li>MySQL</li>
+        </ul>
+      </div>
+      <div class="card skill">
+        <h3>Data &amp; Tools</h3>
+        <ul class="pills">
+          <li>SQLite</li><li>Git</li><li>CI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section wrap" aria-labelledby="layanan-judul">
+    <h2 id="layanan-judul">What I can help with</h2>
+    <div class="skills">
+      <div class="card skill service">
+        <h3>Android apps</h3>
+        <p class="desc">Flutter or Java, from idea to installable. Deliverables: a release APK, source code, and a README.</p>
+      </div>
+      <div class="card skill service">
+        <h3>REST APIs</h3>
+        <p class="desc">Laravel with token authentication and a database. Deliverables: documented endpoints, tests, and CI.</p>
+      </div>
+      <div class="card skill service">
+        <h3>Maintenance &amp; release</h3>
+        <p class="desc">Cleaning up an existing app: bug fixes, tests, and a signed release build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section wrap" aria-labelledby="pendidikan-judul">
+    <h2 id="pendidikan-judul">Education</h2>
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="year">2025</span>
+        <div class="card timeline-card">
+          <h3>Bachelor of Informatics · UPN Veteran East Java</h3>
+          <p class="meta">2025 — present</p>
+          <p class="desc">Continuing higher education in informatics after finishing the software engineering track in vocational school.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="year">2022</span>
+        <div class="card timeline-card">
+          <h3>Software Engineering · SMK Negeri 2 Mojokerto</h3>
+          <p class="meta">2022 — 2025</p>
+          <p class="desc">Studied software engineering — the foundation of the programming and database skills I use today.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section wrap" aria-labelledby="projects-judul">
+    <h2 id="projects-judul">Projects</h2>
+    <p class="section-sub">Finished projects — Android apps and REST APIs.</p>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>Expense Tracker</h3>
+        <p class="tag">Flutter · Android</p>
+        <p class="desc">Offline expense tracking. JSON backups to your own Google Drive — per month, or the entire history in a single file. Re-import, PDF and CSV reports.</p>
+        <div class="project-actions">
+          <a class="btn btn-primary btn-sm" href="https://github.com/Zierch/expense_tracker/releases/latest">Download APK <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/expense_tracker">Code <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="project-note">Android 8+ · 63 MB · data stays on device, no account</p>
+      </div>
+      <div class="shots shots--four" role="group" aria-label="Expense Tracker screenshots">
+        <img src="../assets/expense-dashboard.webp" width="540" height="1134" loading="lazy" alt="Expense Tracker dashboard in dark theme: this month's balance and recent transactions.">
+        <img src="../assets/expense-statistics.webp" width="540" height="1134" loading="lazy" alt="Statistics page: expense chart by category.">
+        <img src="../assets/expense-add.webp" width="540" height="1134" loading="lazy" alt="Add transaction form filled in with an amount and category.">
+        <img class="shot-gif" src="../assets/expense-demo.gif" width="460" height="966" loading="lazy" alt="Short animation: filling in a transaction form and saving it.">
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>Device Point</h3>
+        <p class="tag">Java · Android</p>
+        <p class="desc">Offline product catalog with admin and user roles. Product CRUD, photo upload with compression, search and sorting, dark theme.</p>
+        <div class="project-actions">
+          <a class="btn btn-primary btn-sm" href="https://github.com/Zierch/device-point/releases/latest">Download APK <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/device-point">Code <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="project-note">Local data · demo account: admin / admin123</p>
+      </div>
+      <div class="shots" role="group" aria-label="Device Point screenshots">
+        <img src="../assets/device-list.webp" width="540" height="1200" loading="lazy" alt="Device Point product list: cards with photo, price, and stock.">
+        <img src="../assets/device-detail.webp" width="540" height="1200" loading="lazy" alt="Product detail page with specifications, warranty, and a contact seller button.">
+        <img src="../assets/device-admin.webp" width="540" height="1200" loading="lazy" alt="Admin form for adding a new product.">
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>StudyConnect</h3>
+        <p class="tag">Java · PHP</p>
+        <p class="desc">Classroom app for teachers and students, connected to a Laravel REST API. Token login, class list on the home screen, and forum and assignment tabs from the API.</p>
+        <div class="project-actions">
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/StudyConnect">App <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/StudyConnect-API">API <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="project-note">No APK yet — build from source; API runs locally (see README).</p>
+      </div>
+      <div class="shots" role="group" aria-label="StudyConnect screenshots">
+        <img src="../assets/study-login.webp" width="540" height="1200" loading="lazy" alt="StudyConnect login screen with email and password fields.">
+        <img src="../assets/study-beranda.webp" width="540" height="1200" loading="lazy" alt="StudyConnect home screen showing the signed-in user's classes.">
+        <img src="../assets/study-forum.webp" width="540" height="1200" loading="lazy" alt="Forum tab inside a class, showing an announcement from the teacher.">
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= BLOG ================= -->
+  <section id="blog" class="section wrap" aria-labelledby="blog-judul">
+    <h2 id="blog-judul">Blog</h2>
+
+    <article class="post">
+      <p class="post-meta">18 NOV 2026 · 4 MIN READ</p>
+      <h3>Backups without storing data on a server</h3>
+      <p>
+        Expense Tracker keeps every transaction in SQLite on the phone. The only
+        features that touch the network are backup and update checks. I
+        deliberately didn't build an account system or a server of my own — it
+        uses the user's Google Drive.
+      </p>
+      <h4>The narrowest possible permission</h4>
+      <p>
+        The app only requests the <code>drive.file</code> scope. That means it can
+        see and modify files <em>it created itself</em>, not the whole Drive.
+        Because this scope isn't sensitive, the app skips a lengthy OAuth
+        verification.
+      </p>
+      <h4>Two file formats</h4>
+      <p>
+        There's a monthly export (<code>schemaVersion: 1</code>) and a full-history
+        snapshot (<code>schemaVersion: 2</code>). Both carry <code>app</code> and
+        <code>backupType</code> fields that are checked on import — so a file from
+        another app is rejected. Import also matches existing transactions so the
+        same file never adds duplicates.
+      </p>
+      <h4>One operation at a time</h4>
+      <p>
+        <code>SnapshotCoordinator</code> uses a <code>_busy</code> flag to reject
+        overlapping backups or syncs. Simple, but it prevents two processes from
+        writing the same file on Drive.
+      </p>
+      <p>
+        The result: no server for me to pay for, no user data for me to store,
+        and the app still works offline.
+      </p>
+      <a class="repo" href="https://github.com/Zierch/expense_tracker/blob/main/PRIVACY.md">Read PRIVACY.md <span aria-hidden="true">→</span></a>
+    </article>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section wrap contact" aria-labelledby="contact-judul">
+    <div class="contact-main">
+      <h2 id="contact-judul">Let's work together</h2>
+      <p class="desc">Open for small projects — tell me what you need and your deadline in an issue on any repo, and I'll reply within one business day.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/Zierch">Open GitHub</a>
+      </div>
+    </div>
+    <div class="contact-links">
+      <h3>LINKS</h3>
+      <ul>
+        <li><a href="https://github.com/Zierch">github.com/Zierch</a></li>
+        <li><a href="https://zierch.github.io/portfolio/">zierch.github.io/portfolio</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>© 2026 Zierch — built with plain HTML and CSS.</p>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+</body>
+</html>
