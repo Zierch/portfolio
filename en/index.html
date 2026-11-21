@@ -135,7 +135,7 @@
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section wrap" aria-labelledby="projects-judul">
     <h2 id="projects-judul">Projects</h2>
-    <p class="section-sub">Finished projects — Android apps and REST APIs.</p>
+    <p class="section-sub">Finished projects — Android, web, and REST API apps.</p>
 
     <article class="card project">
       <div class="project-info">
@@ -153,6 +153,23 @@
         <img src="../assets/expense-statistics.webp" width="540" height="1134" loading="lazy" alt="Statistics page: expense chart by category.">
         <img src="../assets/expense-add.webp" width="540" height="1134" loading="lazy" alt="Add transaction form filled in with an amount and category.">
         <img class="shot-gif" src="../assets/expense-demo.gif" width="460" height="966" loading="lazy" alt="Short animation: filling in a transaction form and saving it.">
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>Expense Tracker Web</h3>
+        <p class="tag">Flutter Web · Supabase · Vercel</p>
+        <p class="desc">The browser version of Expense Tracker. A wide window uses a side rail, paired summary cards, and a transaction table; a narrow window falls back to Android-style bottom navigation. Data lives in Postgres with per-account row-level security.</p>
+        <div class="project-actions">
+          <a class="btn btn-primary btn-sm" href="https://expense-tracker-web-ruddy-sigma.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/expense_tracker">Code <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="project-note">Demo account: demo@expensetracker.app · Demo12345! · light/dark theme</p>
+      </div>
+      <div class="shots shots--wide" role="group" aria-label="Expense Tracker Web screenshots">
+        <img src="../assets/expense-web-dashboard.webp" width="720" height="450" loading="lazy" alt="Expense Tracker web dashboard in dark theme: side rail, summary cards, and transaction table.">
+        <img src="../assets/expense-web-statistics.webp" width="720" height="450" loading="lazy" alt="Web statistics page: expense chart by category.">
       </div>
     </article>
 
@@ -202,9 +219,9 @@
       <h3>Backups without storing data on a server</h3>
       <p>
         Expense Tracker keeps every transaction in SQLite on the phone. The only
-        features that touch the network are backup and update checks. I
-        deliberately didn't build an account system or a server of my own — it
-        uses the user's Google Drive.
+        features that touch the network are backup and update checks. On Android
+        I deliberately didn't build an account system or a server of my own — it
+        uses the user's Google Drive. The web version uses Supabase.
       </p>
       <h4>The narrowest possible permission</h4>
       <p>
@@ -228,8 +245,9 @@
         writing the same file on Drive.
       </p>
       <p>
-        The result: no server for me to pay for, no user data for me to store,
-        and the app still works offline.
+        The result on Android: no server for me to pay for, no user data for me
+        to store, and the app still works offline. The web version uses Supabase
+        for its demo data.
       </p>
       <a class="repo" href="https://github.com/Zierch/expense_tracker/blob/main/PRIVACY.md">Read PRIVACY.md <span aria-hidden="true">→</span></a>
     </article>

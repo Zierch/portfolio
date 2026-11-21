@@ -135,7 +135,7 @@
   <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section wrap" aria-labelledby="projects-judul">
     <h2 id="projects-judul">Projects</h2>
-    <p class="section-sub">Proyek yang sudah selesai — aplikasi Android dan REST API.</p>
+    <p class="section-sub">Proyek yang sudah selesai — aplikasi Android, web, dan REST API.</p>
 
     <article class="card project">
       <div class="project-info">
@@ -153,6 +153,23 @@
         <img src="assets/expense-statistics.webp" width="540" height="1134" loading="lazy" alt="Halaman statistik: grafik pengeluaran per kategori.">
         <img src="assets/expense-add.webp" width="540" height="1134" loading="lazy" alt="Formulir tambah transaksi yang sudah terisi nominal dan kategori.">
         <img class="shot-gif" src="assets/expense-demo.gif" width="460" height="966" loading="lazy" alt="Animasi singkat: mengisi formulir transaksi lalu menyimpannya.">
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-info">
+        <h3>Expense Tracker Web</h3>
+        <p class="tag">Flutter Web · Supabase · Vercel</p>
+        <p class="desc">Versi browser dari Expense Tracker. Jendela lebar memakai rail samping, kartu ringkasan berpasangan, dan tabel transaksi; jendela sempit kembali ke navigasi bawah seperti Android. Data disimpan di Postgres dengan kebijakan akses per akun.</p>
+        <div class="project-actions">
+          <a class="btn btn-primary btn-sm" href="https://expense-tracker-web-ruddy-sigma.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/Zierch/expense_tracker">Kode <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="project-note">Akun demo: demo@expensetracker.app · Demo12345! · tema terang/gelap</p>
+      </div>
+      <div class="shots shots--wide" role="group" aria-label="Tangkapan layar Expense Tracker Web">
+        <img src="assets/expense-web-dashboard.webp" width="720" height="450" loading="lazy" alt="Dashboard web Expense Tracker tema gelap: rail samping, kartu ringkasan, dan tabel transaksi.">
+        <img src="assets/expense-web-statistics.webp" width="720" height="450" loading="lazy" alt="Halaman statistik web: grafik pengeluaran per kategori.">
       </div>
     </article>
 
@@ -202,9 +219,9 @@
       <h3>Backup tanpa menyimpan data di server</h3>
       <p>
         Expense Tracker menyimpan semua transaksi di SQLite di HP. Satu-satunya
-        fitur yang menyentuh jaringan adalah backup dan pengecekan update. Saya
-        sengaja tidak membuat akun atau server sendiri — yang dipakai adalah
-        Google Drive milik pengguna.
+        fitur yang menyentuh jaringan adalah backup dan pengecekan update. Untuk
+        versi Android saya sengaja tidak membuat akun atau server sendiri — yang
+        dipakai adalah Google Drive milik pengguna. Versi webnya memakai Supabase.
       </p>
       <h4>Izin yang sesempit mungkin</h4>
       <p>
@@ -228,8 +245,9 @@
         mencegah dua proses menulis file yang sama di Drive.
       </p>
       <p>
-        Hasilnya: tidak ada server yang saya bayar, tidak ada data pengguna yang
-        saya simpan, dan aplikasi tetap bisa dipakai tanpa koneksi.
+        Hasilnya pada Android: tidak ada server yang saya bayar, tidak ada data
+        pengguna yang saya simpan, dan aplikasi tetap bisa dipakai tanpa koneksi.
+        Versi web memakai Supabase untuk data demo.
       </p>
       <a class="repo" href="https://github.com/Zierch/expense_tracker/blob/main/PRIVACY.md">Baca PRIVACY.md <span aria-hidden="true">→</span></a>
     </article>
