@@ -210,7 +210,7 @@ body {
 
 h1 {
   margin: 0 0 32px;
-  font-size: clamp(2.2rem, 3.6vw, 52px);
+  font-size: clamp(1.9rem, 3vw, 42px);
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -235,6 +235,16 @@ h1 {
   height: 7px;
   border-radius: 50%;
   background: #4ade80;
+}
+
+/* label kecil di atas judul hero; "About Me" tidak lagi jadi H1 */
+.hero-text .eyebrow {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .hero-text p {
@@ -771,6 +781,12 @@ footer a:hover { text-decoration: underline; }
        aturan desktop akan memangkas isinya di sini */
     max-height: none;
     scroll-snap-align: start;
+  }
+
+  /* tangkapan web landscape: satu per layar supaya teks dashboard terbaca */
+  .shots--wide img {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .project { padding: 24px; }
