@@ -27,7 +27,7 @@
   --border: #2e2e2e;
   --text: #f3f3f3;
   --dim: #949494;
-  --muted: #6b6b6b;
+  --muted: #8a8a8a;
   --accent: #9072d4;
   --accent-dark: #6d46c7;
   --on-accent: #0a0612;
@@ -179,6 +179,22 @@ body {
   height: 2px;
   background: var(--text);
   border-radius: 2px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* kotak centang penggerak menu; tersembunyi tapi tetap bisa di-Tab */
+.menu-check {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* ---------- hero ---------- */
@@ -683,12 +699,59 @@ footer a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 720px) {
-  .menu { display: none; }
+  .nav {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
 
-  /* dorong penanda bahasa ke kanan, berdampingan dengan hamburger */
-  .lang { margin-left: auto; }
+  /* urutan: logo, bahasa, hamburger, panel menu */
+  .logo { order: 1; }
+  .lang { order: 2; margin-left: auto; }
+  .menu-toggle { order: 3; display: flex; }
 
-  .menu-toggle { display: flex; }
+  /* kotak centang aktif hanya di layar kecil */
+  .menu-check { display: block; }
+
+  /* menu tersembunyi sampai kotak centang dicentang */
+  .menu {
+    display: none;
+    order: 4;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin: 10px 0 0;
+    padding: 6px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+  }
+
+  .menu-check:checked ~ .menu { display: flex; }
+
+  .menu a {
+    padding: 11px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .menu a:first-child { border-top: 0; }
+
+  .menu-check:focus-visible ~ .menu-toggle {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .menu-check:checked ~ .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-check:checked ~ .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-check:checked ~ .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
   .nav::after { bottom: -14px; }
 
